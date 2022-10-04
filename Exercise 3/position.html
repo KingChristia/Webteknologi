@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT2805</title>
+
+  <style type="text/css">
+
+    html, body{
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      /* left: 2rem; */
+      /* top: 2rem; */
+
+    
+    }
+    /* Part 1 */
+
+    .header{
+      font-family: sans-serif;
+      padding-top: 30px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .box{
+      border-width: 2px;
+      border-color: #0060A3;
+      border-style: solid;
+      /*height: 400px;*/
+      /* max-width: 80rem; */
+      /* max-height: 40rem; */
+      position: relative;
+      width: 70%;
+      height: 50%;
+      /* position: absolute; */
+    }
+
+    .one{
+      width: 100px;
+      height: 100px;
+      border-width: 2px;
+      border-color: #FAA21B;
+      border-style: solid;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .two{
+      width: 100px;
+      height: 100px;
+      border-width: 2px;
+      border-color: #FAA21B;
+      border-style: solid;
+      background-color: #fff;
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      /* right: 0%; */
+    }
+
+    .three{
+      width: 100px;
+      height: 100px;
+      border-width: 2px;
+      border-color: #FAA21B;
+      border-style: solid;
+      background-color: #fff;
+      position: absolute;
+      display: flex;
+      top: 20%;
+      right: -3.5rem;
+      z-index: 1;
+    }
+
+    .five{
+      bottom: 10px;
+      right: 10px;
+      font-size: 35px;
+      font-family: sans-serif;
+      position: absolute;
+      top: 90%;
+      right: 2%;
+      /* left: 0px; */
+    }
+
+    .four{
+      width: 50px;
+      height: 50px;
+      border-width: 2px;
+      border-color: #FAA21B;
+      border-style: solid;
+      position: absolute;
+      display: flex;
+      /* top: auto; */
+      z-index: 2;
+      /* top: 50%; */
+      left: 22%;
+      /* top: 20%; */
+      /* left: 90%; */
+      /* display: inline; */
+      bottom: 1.3rem;
+    }
+    a:link{
+      color: #0060A3;
+    }
+    a:visited{
+      color: green;
+    }
+    a:hover{
+      color: pink;
+    }
+    a:active{
+      color: red;
+    }
+    /* Part 2 */
+
+
+  </style>
+</head>
+<body>
+
+    <div class="header">
+      <h1>Assignment 3: position</h1>
+    </div>
+
+    <div class="box">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three">
+        <div class="four"></div>
+      </div>
+      <div class="five">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS is awesome</a>
+      </div>
+    </div>
+
+
+
+</body>
+</html>

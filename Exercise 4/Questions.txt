@@ -1,0 +1,3 @@
+1. Mobile phones disable it by default to save bandwidth, battery and to prevent performance issues.
+2. Will do nothing
+3. Dedicated versions will require more work and code to complete and update. Responsive design is much better.

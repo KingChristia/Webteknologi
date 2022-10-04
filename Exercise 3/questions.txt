@@ -1,0 +1,3 @@
+1. Position absolute moves element relative to upper left corner,
+ while fixed moves elements relative to browser window
+2. Using psudo selectors, with nth-child(3n+3) we can acess the third child within each element
