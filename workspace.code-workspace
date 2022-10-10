@@ -1,7 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "WebTek",
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WebTek"
+	}
 }
