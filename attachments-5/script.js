@@ -27,7 +27,7 @@ function epleAndKake() {
         }
     });
 }
-epleAndKake()
+//epleAndKake()
 
 
 /* Part 4 */
@@ -38,28 +38,60 @@ document.getElementById("title").textContent = 'Hello, JavaScript';
 
 /* Part 5 */
 function changeDisplay () {
-    document.getElementsByClassName('buttons')
+    //First button
+    var button1  = document.getElementsByClassName('buttons')[0].firstElementChild
+    button1.addEventListener('click',function(event){
+        var magic = document.getElementById('magic').style.display = 'none';
+    })
+        
 }
+changeDisplay()
+
 
 function changeVisibility () {
-
+    var button2  = document.getElementsByClassName('buttons')[0].firstElementChild.nextElementSibling
+    
+    button2.addEventListener('click', function(event){
+        document.getElementById('magic').style.visibility = 'hidden';
+        document.getElementById('magic').style.display = 'block';
+    })
 }
+changeVisibility()
 
 function reset () {
-
+    var button3  = document.getElementsByClassName('buttons')[0].lastElementChild
+    
+    button3.addEventListener('click', function(e){
+        document.getElementById('magic').style.display = "";
+        document.getElementById('magic').style.visibility = "";
+    })
 }
+reset()
 
 /* Part 6 */
-const technologies = [
-    'HTML5',
-    'CSS3',
-    'JavaScript',
-    'Python',
-    'Java',
-    'AJAX',
-    'JSON',
-    'React',
-    'Angular',
-    'Bootstrap',
-    'Node.js'
-];
+function part6(){
+    
+    const technologies = [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'Python',
+        'Java',
+        'AJAX',
+        'JSON',
+        'React',
+        'Angular',
+        'Bootstrap',
+        'Node.js'
+    ];
+
+    var ul = document.getElementById('tech')
+    // appends the node for each element,
+    technologies.forEach(element => {
+        var node = document.createElement('li')
+        var textnode = document.createTextNode(element)
+        node.appendChild(textnode)
+        ul.appendChild(node)
+    });
+}
+part6()
