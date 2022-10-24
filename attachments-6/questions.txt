@@ -1,0 +1,11 @@
+1. Javascript uses floating point numbers, which are subject to rounding errors. 
+This happens because of numbers like 0.2 are base (10) numbers, and in the computer world, every numbers is represented in base 2.
+
+2. Method decides the delivery method of the form. Either POST or GET
+
+3.This is because the GET method sends the key and value in the URL.
+
+4. Form validation is important for security. Local validation doesnt cover all the ways to send a form to the server. 
+Javascript covers client side validation.
+
+5. Textarea is approproate to use when you need to write more text than a single line input.

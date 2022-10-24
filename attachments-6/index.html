@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <form
+      style="display: flex; flex-direction: column; align-items: center"
+      action="https://folk.ntnu.no/anderobs/webtek/receive_form.php"
+      method="post"
+    >
+      <label for="name">Real Name</label>
+      <input type="text" id="name" name="name" required /><br />
+      <label for="gender">Gender</label>
+      <input type="text" id="gender" name="gender" required/><br />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email"required /><br />
+      <label for="Birthdate">Birthdate</label>
+      <input type="date" id="birthdate" name="birthdate" max="1988-01-01"required/><br />
+      <label for="hero">Hero name</label>
+      <input type="text" id="hero" name="hero" required/><br />
+      <label for="spandex">Do you wear spandex?</label>
+      <input type="checkbox" id="spandex" name="spandex"required /><br />
+      <label for="strength">Strength?</label>
+      <input
+        type="number"
+        id="strength"
+        name="strength"
+        min="1"
+        max="10"
+        required
+      /><br />
+      <label for="speed">Speed</label>
+      <input type="number" id="speed" name="speed" min="1" max="10"required /><br />
+      <label for="intelligence">Intelligence</label>
+      <input
+        type="number"
+        id="intelligence"
+        name="intelligence"
+        min="1"
+        max="10"
+        required
+      /><br />
+      <label for="income">Income</label>
+      <input type="number" for="income" name="income" min="0" required />
+      <label for="wealth">Wealth</label>
+      <input type="number" for="wealth" name="wealth" min="0" required />
+      <label for="tax">Tax</label>
+      <input for="tax" name="tax" disabled />
+      <br />
+      <label for="submit">
+        <input type="submit" id="submit" name="submit" />
+      </label>
+    </form>
+    <script>
+     
+      var income = document.getElementsByName("income")[0];
+      var wealth = document.getElementsByName("wealth")[0];
+      function tax(income, wealth) {
+       return ((0.35 * income) + (0.25 * wealth)).round(2);
+      }  
+      income.addEventListener("change", function() {
+        document.getElementsByName("tax")[0].value = tax(income.value, wealth.value);
+      });
+      wealth.addEventListener("change", function() {
+        document.getElementsByName("tax")[0].value = tax(income.value, wealth.value);
+      });
+
+
+    </script>
+  </body>
+</html>
