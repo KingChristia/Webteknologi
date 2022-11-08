@@ -1,0 +1,11 @@
+1. You can use WebGL to get 3d canvas!
+
+2. Example from w3school = 
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+
+3.  const countriesStartingWithN2 = countries.filter(country => country.startsWith('N'));
+    console.log(countriesStartingWithN2)
