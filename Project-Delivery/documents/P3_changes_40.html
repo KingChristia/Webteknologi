@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>P3 Changes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>P3 Changes</h1>
+        <hr>
+        <h3>Andreas Børve, Andreas Olborg, Jon Grendstad, Ole Evjen-Caspersen, Christian Kartveit, Skjalg Nysæter</h3>
+    </header>
+
+    <hr>
+
+    <main>
+        <article>
+            <h2>P3 Changes</h2>
+            <section>
+                <h2>Table of contents</h2>
+                <ol>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#implementation">Implementation</a></li>
+                    <li><a href="#evaluation">Evaluation</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                    <li><a href="#references">References</a></li>
+                </ol>
+            </section>
+
+
+
+            <hr>
+
+            <section id="s2">
+                <h2><strong>Administrative details</strong></h2>
+                <p><strong> Client name:</strong> Kaj-Robert and Kurre Räven </p>
+                <p> <strong>Website name:</strong> Cut n Shut</p>
+                <p> <strong>Link to website:</strong> https://folk.ntnu.no/skjalgn/webtek/</p>
+            </section>
+
+            <section id="s3">
+                <h2>The changes we have made</h2>
+                <p>
+                    When we started designing the website, we set out with a pretty clear plan. By the time we delivered
+                    P2,
+                    the structure was well defined and we had a clear vision about how we wanted the page to look.
+                    Thanks to the Figma we created, we ended up not having to change the styling of the page that much.
+                    That being said, we saw it necessary to modify some of the javascript initially planned. Below we
+                    will provide a summary of the changes, and the concerning files.
+                    <br>
+
+                <h4>Changes to the footer </h4>
+                Because the footer is present on the bottom of every page, the changes presented here naturally applies
+                to every page.
+                The initial plan was to include contact information, links to social media, and a stylish logo. As we
+                progressed through
+                the development, we noticed that the size of the footer was way too big. It took the attention away from
+                the actual page
+                content and made it hard to fit the rest on the side. We therefore decided to make it smaller. In
+                addition, we considered it
+                unnecessary to provide the "quick reservation tool" originally planned, so we removed it. The scissor
+                logo was replaced
+                by the same logo used in the nav-bar.
+
+                <h4>Changes to homepage.html:</h4>
+                First of all, we changed the file name to "index.html". This seemed to be a standard for most websites,
+                so we decided to go with that. For the rest of the page, we stuck to the design presented in P2.
+                <br>
+                <h4>Changes to reservations.html:</h4>
+                There were few changes done to this page, except for some small differences regarding font-family,
+                and the color of the reservation button. We also added a calender widget inside the date-input field.
+                This made it easier to collect the date on the right format, and it looks professional too.
+                <br>
+                <h4>Changes to gallery.html:</h4>
+                For the aesthetics, we wanted to keep every image the same size, and with the same proportions. This
+                simply
+                makes the page more visually pleasing to look at, and we also added a header. There is a image text
+                attached to
+                every photo as well, to provide information/reviews of the haircut.
+
+
+                <br>
+                <h4>Changes to logo.js:</h4>
+                The initial plan was to make the logo change size and color when hovered over. We thought this was a bit
+                too similar to the hover effect we ended up with in gallery.js, so we took the decicion to make it
+                rotate instead when hovered over.
+                Just a cool easter egg.
+
+
+                <br>
+                <h4>Changes to gallery.js:</h4>
+                Instead of having pretty scroll effects, we added a nice touch where the image that the user is hovering
+                over, gets highlighted.
+                To accomplish this we added a box shadow to the picture that is hovered over.
+                <br>
+
+                <h4>Changes to nav_bar.js</h4>
+                Instead of having a script for the nav bar effects, we created an "inject.js". This javascript file
+                essentially
+                defines the HTML for the nav bar and the footer, and then makes it possible to inject it into every page
+                on the
+                website. This was done to avoid having to write the same code on every page. The hover effect in the nav
+                bar
+                was therefore achieved using pure CSS instead.
+
+
+                <h4>How modularity was handled: </h4>
+                We conclude that it is not possible to load files from the file system to the browser without wrapping
+                our code as a web server. This is for security reasons. It would be bad if the browser could access your
+                file system and do things with your files. In this assignment we were not allowed to create a local web
+                server as we are not allowed to use any plugins. This makes modularity hard. The solution we had were to
+                inject html as a string from a jacascript file. We use the innerHTML property to achiveve this. Jon was
+                responsible
+                for managing this.
+
+                </p>
+
+
+
+            </section>
+
+            <h3>The final work division</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Filename</th>
+                        <th>Description</th>
+                        <th>In charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>index.html</td>
+                        <td>The homepage</td>
+                        <td>Skjalg</td>
+                    </tr>
+                    <tr>
+                        <td>gallery.html</td>
+                        <td>Page containing hairstyles</td>
+                        <td>Christian</td>
+                    </tr>
+                    <tr>
+                        <td>about.html</td>
+                        <td>Page containing information about the salon</td>
+                        <td>Jon</td>
+                    </tr>
+                    <tr>
+                        <td>reservations.html</td>
+                        <td>Page with the possibility to make a reservation</td>
+                        <td>Andreas O.</td>
+
+                    </tr>
+                    <tr>
+                        <td>logo.js</td>
+                        <td>A javascript to make the logo rotate</td>
+                        <td>Ole</td>
+
+                    </tr>
+                    <tr>
+                        <td>reservations.js</td>
+                        <td>A script making the reservation interface responsive </td>
+                        <td>Christian & Skjalg</td>
+
+                    </tr>
+                    <tr>
+                        <td>gallery.js</td>
+                        <td>A javascript creating box shadow around higlighted images</td>
+                        <td>Andreas B.</td>
+
+                    </tr>
+                    <tr>
+                        <td>inject.js</td>
+                        <td>Injects the html to be provided in the nav-bar and the footer on each web page.</td>
+                        <td>Jon</td>
+
+                    </tr>
+                    <tr>
+                        <td>Logo</td>
+                        <td>The logo for Cut n Shut</td>
+                        <td>Skjalg & Ole</td>
+
+                    </tr>
+                    <tr>
+                        <td>styling.css</td>
+                        <td>File containing all styling for the website</td>
+                        <td>Everyone</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+</body>
+
+</html>

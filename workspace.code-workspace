@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"name": "webtek-main",
+			"path": "../Downloads/webtek-main"
+		},
+		{
 			"name": "WebTek",
 			"path": "."
 		}
